@@ -1,0 +1,7 @@
+imgvision==0.1.7.1
+matplotlib==3.7.2
+numpy==1.24.3
+scipy==1.11.3
+skimage==0.0
+torch==1.12.1+cu113
+tqdm==4.66.1

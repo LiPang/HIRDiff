@@ -1,0 +1,26 @@
+{
+    "model": {
+        "in_channel": 3,
+        "out_channel": 3,
+        "inner_channel": 128,
+        "channel_multiplier": [
+            1,
+            2,
+            4,
+            8,
+            8
+        ],
+        "attn_res": [
+            16
+        ],
+        "res_blocks": 2,
+        "dropout": 0.2
+        },
+
+    "diffusion_setting": {
+        "diffusion_steps": 1000,
+        "beta_schedule": "linear",
+        "beta_linear_start": 1e-6,
+        "beta_linear_end": 1e-2
+    }
+}
