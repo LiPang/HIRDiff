@@ -1,15 +1,12 @@
 # HIR-Diff: Unsupervised Hyperspectral Image Restoration Via Improved Diffusion Models
 
----
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2402.15865)
 
-This is the Pytorch implementation of Unsupervised Hyperspectral Image Restoration Via Improved Diffusion Models.
+<hr />
 
-<div align=left>
-<img src="imgs/diffusion.png" height="100%" width="90%"/>
-</div>
+> **Abstract:** *Hyperspectral image (HSI) restoration aims at recovering clean images from degraded observations and plays a vital role in downstream tasks. Existing model-based methods have limitations in accurately modeling the complex image characteristics with handcraft priors, and deep learning-based methods suffer from poor generalization ability. To alleviate these issues, this paper proposes an unsupervised HSI restoration framework with pre-trained diffusion model (HIR-Diff), which restores the clean HSIs from the product of two low-rank components, i.e., the reduced image and the coefficient matrix. Specifically, the reduced image, which has a low spectral dimension, lies in the image field and can be inferred from our improved diffusion model where a new guidance function with total variation (TV) prior is designed to ensure that the reduced image can be well sampled. The coefficient matrix can be effectively pre-estimated based on singular value decomposition (SVD) and rank-revealing QR (RRQR) factorization. Furthermore, a novel exponential noise schedule is proposed to accelerate the restoration process (about 5x acceleration for denoising) with little performance decrease. Extensive experimental results validate the superiority of our method in both performance and speed on a variety of HSI restoration tasks, including HSI denoising, noisy HSI super-resolution, and noisy HSI inpainting.
 
-## Introduction
-Hyperspectral image (HSI) restoration aims at recovering clean images from degraded observations and plays a vital role in downstream tasks. Existing model-based methods have limitations in accurately modeling the complex image characteristics with handcraft priors, and deep learning-based methods suffer from poor generalization ability. To alleviate these issues, this paper proposes an unsupervised HSI restoration framework with pre-trained diffusion model (HIR-Diff), which restores the clean HSIs from the product of two low-rank components, i.e., the reduced image and the coefficient matrix. Specifically, the reduced image, which has a low spectral dimension, lies in the image field and can be inferred from our improved diffusion model where a new guidance function with total variation (TV) prior is designed to ensure that the reduced image can be well sampled. The coefficient matrix can be effectively pre-estimated based on singular value decomposition (SVD) and rank-revealing QR (RRQR) factorization. Furthermore, a novel exponential noise schedule is proposed to accelerate the restoration process (about 5$\times$ acceleration for denoising) with little performance decrease. Extensive experimental results validate the superiority of our method in both performance and speed on a variety of HSI restoration tasks, including HSI denoising, noisy HSI super-resolution, and noisy HSI inpainting.
+<hr />
 
 ## Hightlights
 <div align=center>
@@ -21,11 +18,7 @@ Hyperspectral image (HSI) restoration aims at recovering clean images from degra
 ---
 ```bash
 conda create -n hirdiff python=3.9
-```
-```bash
 conda activate hirdiff
-```
-```bash
 pip3 install -r requirement.txt
 ```
 
@@ -67,18 +60,17 @@ python main.py -eta1 8 -eta2 6 --k 5 -step 20 -dn Salinas --task inpainting --ta
 
 ### Comparison with other schedules
 
-linear schedule (psnr: 34.33)
 ```bash
+# linear schedule (psnr: 34.33)
 python main.py -eta1 20 -eta2 1 -step 20 -dn Houston --task denoise --task_params 50 -gpu 0 --beta_schedule linear      
-```
-cosine schedule (psnr: 34.61)
-```bash
+
+# cosine schedule (psnr: 34.61)
 python main.py -eta1 20 -eta2 1 -step 20 -dn Houston --task denoise --task_params 50 -gpu 0 --beta_schedule cosine      
-```
-exponential schedule (psnr: 36.01)
-```bash
+
+# exponential schedule (psnr: 36.01)
 python main.py -eta1 16 -eta2 10 --k 8 -step 20 -dn Houston --task denoise --task_params 50 -gpu 0 --beta_schedule exp   
 ```
+
 ## Citation
 ```
 @article{pang2024hir,
