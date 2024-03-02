@@ -42,17 +42,17 @@ and put the model into checkpoints\diffusion
 
 ### Testing
 
-Denoising on Houston dataset (sigma=50) (psnr: 36.01)
+Denoising on Houston dataset (sigma=50) 
 ```bash
 python main.py -eta1 16 -eta2 10 --k 8 -step 20 -dn Houston --task denoise --task_params 50 -gpu 0   
 ```
 
-Super-Resolution on WDC dataset (upscale factor=x4) (psnr: 34.68)
+Super-Resolution on WDC dataset (upscale factor=x4) 
 ```bash
 python main.py -eta1 500 -eta2 12 --k 8 -step 20 -dn WDC --task sr --task_params 0.25 -gpu 0  
 ```
 
-Inpainting on Salinas dataset (masking rate=0.8) (psnr: )
+Inpainting on Salinas dataset (masking rate=0.8) 
 ```bash
 python main.py -eta1 8 -eta2 6 --k 5 -step 20 -dn Salinas --task inpainting --task_params 0.8 -gpu 0  
 ```
@@ -79,4 +79,12 @@ exponential schedule (psnr: 36.01)
 ```bash
 python main.py -eta1 16 -eta2 10 --k 8 -step 20 -dn Houston --task denoise --task_params 50 -gpu 0 --beta_schedule exp   
 ```
-
+## Citation
+'''
+@article{pang2024hir,
+  title={HIR-Diff: Unsupervised Hyperspectral Image Restoration Via Improved Diffusion Models},
+  author={Pang, Li and Rui, Xiangyu and Cui, Long and Wang, Hongzhong and Meng, Deyu and Cao, Xiangyong},
+  journal={arXiv preprint arXiv:2402.15865},
+  year={2024}
+}
+'''
