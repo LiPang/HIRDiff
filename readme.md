@@ -80,11 +80,11 @@ exponential schedule (psnr: 36.01)
 python main.py -eta1 16 -eta2 10 --k 8 -step 20 -dn Houston --task denoise --task_params 50 -gpu 0 --beta_schedule exp   
 ```
 ## Citation
-'''
+```
 @article{pang2024hir,
   title={HIR-Diff: Unsupervised Hyperspectral Image Restoration Via Improved Diffusion Models},
   author={Pang, Li and Rui, Xiangyu and Cui, Long and Wang, Hongzhong and Meng, Deyu and Cao, Xiangyong},
   journal={arXiv preprint arXiv:2402.15865},
   year={2024}
 }
-'''
+```
