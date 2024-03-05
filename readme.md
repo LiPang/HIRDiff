@@ -1,4 +1,5 @@
-# HIR-Diff: Unsupervised Hyperspectral Image Restoration Via Improved Diffusion Models
+# **[CVPR2024]** HIR-Diff: Unsupervised Hyperspectral Image Restoration Via Improved Diffusion Models
+Li Pang, Xiangyu Rui, Long Cui, Hongzhong Wang, Deyu Meng, Xiangyong Cao
 
 [![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/abs/2402.15865)
 
