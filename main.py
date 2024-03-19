@@ -42,7 +42,7 @@ def parse_args_and_config():
     parser.add_argument('--task_params', type=str, default='50')
 
     # settings
-    parser.add_argument('--beta_schedule', type=str, default='cosine')
+    parser.add_argument('--beta_schedule', type=str, default='exp')
     parser.add_argument('--beta_linear_start', type=float, default=1e-6)
     parser.add_argument('--beta_linear_end', type=float, default=1e-2)
     parser.add_argument('--cosine_s', type=float, default=0)
