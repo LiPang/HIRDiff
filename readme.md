@@ -33,17 +33,17 @@ downloading the data for denoise, super-resolution and inpainting from [Google D
 
 Denoising on Houston dataset (sigma=50) 
 ```bash
-python main.py -eta1 16 -eta2 10 --k 8 -step 20 -dn Houston --task denoise --task_params 50 -gpu 0   
+python main.py -eta1 16 -eta2 10 --k 8 -step 20 -dn Houston --task denoise --task_params 50 -gpu 0 --beta_schedule exp  
 ```
 
 Super-Resolution on WDC dataset (upscale factor=x4) 
 ```bash
-python main.py -eta1 500 -eta2 12 --k 8 -step 20 -dn WDC --task sr --task_params 0.25 -gpu 0  
+python main.py -eta1 500 -eta2 12 --k 8 -step 20 -dn WDC --task sr --task_params 0.25 -gpu 0 --beta_schedule exp 
 ```
 
 Inpainting on Salinas dataset (masking rate=0.8) 
 ```bash
-python main.py -eta1 8 -eta2 6 --k 5 -step 20 -dn Salinas --task inpainting --task_params 0.8 -gpu 0  
+python main.py -eta1 8 -eta2 6 --k 5 -step 20 -dn Salinas --task inpainting --task_params 0.8 -gpu 0 --beta_schedule exp 
 ```
 
 ### The effectiveness of RRQR
