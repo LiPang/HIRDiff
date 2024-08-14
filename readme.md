@@ -18,7 +18,7 @@ Li Pang, Xiangyu Rui, Long Cui, Hongzhong Wang, Deyu Meng, Xiangyong Cao
 ```bash
 conda create -n hirdiff python=3.9
 conda activate hirdiff
-pip3 install -r requirement.txt
+pip3 install -r requirements.txt
 ```
 
 
