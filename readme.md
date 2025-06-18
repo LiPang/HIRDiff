@@ -27,7 +27,7 @@ pip3 install -r requirements.txt
 downloading the pretrained diffusion model [I190000_E97_gen.pth](https://www.dropbox.com/sh/z6k5ixlhkpwgzt5/AAApBOGEUhHa4qZon0MxUfmua?dl=0) provided by [ddpm-cd](https://github.com/wgcban/ddpm-cd) and put the model into *checkpoints\diffusion*
 
 ### Download the data
-downloading the data for denoise, super-resolution and inpainting from [Google Drive](https://drive.google.com/drive/folders/1NZqx01X1XZnF_VR3cJiy16v9lRHzzsZ1?usp=drive_link) or [Baidu Netdisk(code:fzst)](https://pan.baidu.com/s/1M2TU7NdMAT2u7qF8SKTI4g?pwd=fzst).
+downloading the data for denoise, super-resolution and inpainting from [Google Drive](https://drive.google.com/file/d/1zs7X7tscTo-ryLner6v1QhTyXtvC7asQ/view?usp=sharing) or [Baidu Netdisk(code:fzst)](https://pan.baidu.com/s/1M2TU7NdMAT2u7qF8SKTI4g?pwd=fzst).
 
 ### Testing
 
